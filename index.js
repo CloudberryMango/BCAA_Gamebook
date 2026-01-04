@@ -66,10 +66,7 @@ const PageDao = {
     return newPage;
   },
   listByStory: (storyId) => {
-    // Vrácení stránek seřazených abecedně podle názvu (title)
-    return pages
-      .filter((p) => p.storyId === storyId)
-      .sort((a, b) => a.title.localeCompare(b.title));
+    return pages.filter((p) => p.storyId === storyId);
   },
   get: (id) => {
     return pages.find((p) => p.id === id);
